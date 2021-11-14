@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Exercise extends Model {}
+class Exercise extends Model { }
 
 Exercise.init(
   {
@@ -12,8 +12,9 @@ Exercise.init(
       autoIncrement: true,
     },
     date: {
-		//insert date column info here. look at sequelize docs to figure out how to save the current date
-	},
+      type: DataTypes.DATE,
+      allowNull: false
+    },
     height: {
       type: DataTypes.INTEGER,
       allowNull: false,
