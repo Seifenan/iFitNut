@@ -94,6 +94,10 @@ input {
 
 }
 
+.prevS {
+  padding-bottom: 5%;
+}
+
 .cStats,
 .lStats {
   flex: 1;
@@ -129,6 +133,10 @@ input {
 
 
 /* index.html */
+
+.pgName {
+  color: black;
+}
 
 .homeBar {
   background-color: var(--darkBlue);  
