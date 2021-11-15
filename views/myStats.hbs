@@ -1,0 +1,16 @@
+<h2>Mark today's Results!</h2>
+<div>
+  {{>dataSub}}
+</div>
+
+<h2>Graphical Stats</h2>
+<div>
+  {{>charts}}
+</div>
+
+<h2>Previous Stats</h2>
+<ul>
+  {{#each date}}
+  {{>prevStats}}
+  {{/each}}
+</ul>
