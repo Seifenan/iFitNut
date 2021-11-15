@@ -1,0 +1,117 @@
+:root {
+  --lightBlue: #D9F1FE;
+  --darkBlue: #3FBBFA;
+  --red: #7B0000;
+}
+
+h3 {
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+.userBar {
+  background-color: var(--darkBlue);  
+  padding: 1%;
+  display: flex
+} 
+
+.userInfo {
+  flex: 1;
+
+}
+
+.logoutBtn {
+  color: var(--darkBlue);
+  background-color: var(--lightBlue);
+  border: none;
+  border-radius: 30%;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+/* .logoutBtn:hover {
+  border-style: var(--red);
+  color: black;
+  border-style: double;
+} */
+
+
+.nav {
+  background-color: var(--red);
+  padding: 1%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.sendBtn,
+.statsBtn {
+  color: var(--darkBlue);
+  background-color: var(--lightBlue);
+  border: none;
+  border-radius: 30%;
+  padding-left: 2%;
+  padding-right: 2%;
+
+}
+
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  fill: grey;
+}
+
+
+
+
+.container {
+  display: flex;
+  padding: 5%;
+}
+
+.containerTwo {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+}
+
+.cStats,
+.lStats {
+  flex: 1;
+  padding: 5%;
+  box-shadow: 10px 10px 25px grey;
+}
+
+.cStats:first-child {
+  margin-right: 5%;
+}
+
+
+.submitBtn {
+  color: var(--lightBlue);
+  background-color: var(--darkBlue);
+  border: none;
+  border-radius: 30%;
+  padding: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.pStats {
+  display: flex;
+  padding: 3%;
+  box-shadow: 10px 10px 25px grey;
+  justify-content: space-between;
+  text-align: center;
+
+}
