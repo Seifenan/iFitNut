@@ -1,10 +1,11 @@
 :root {
   --lightBlue: #D9F1FE;
-  --darkBlue: #3FBBFA;
+  --darkBlue: #45C1F3;
   --red: #7B0000;
+  --footer: #2C404F;
 }
 
-h3 {
+.center {
   text-align: center;
 }
 
@@ -12,32 +13,41 @@ a{
   text-decoration: none;
   color: white;
 }
+
+button {
+  border: none;
+  
+}
+
+button:hover {
+  filter: brightness(75%);
+}
+
 .userBar {
   background-color: var(--darkBlue);  
-  padding: 1%;
-  display: flex
+  display: flex;
+  justify-content: space-between;
 } 
 
 .userInfo {
-  flex: 1;
+  padding-left: 2%;
+}
 
+
+.navBtn{
+  padding-top: 40px;
+  padding-right: 2%;
 }
 
 .logoutBtn {
   color: var(--darkBlue);
   background-color: var(--lightBlue);
-  border: none;
-  border-radius: 30%;
-  padding: 1%;
-  padding-left: 2%;
-  padding-right: 2%;
+  border-radius: 25px 25px 25px 25px; 
+  /* padding: .5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%; */
 }
 
-/* .logoutBtn:hover {
-  border-style: var(--red);
-  color: black;
-  border-style: double;
-} */
 
 
 .nav {
@@ -52,8 +62,7 @@ a{
 .statsBtn {
   color: var(--darkBlue);
   background-color: var(--lightBlue);
-  border: none;
-  border-radius: 30%;
+  border-radius: 25px 25px 25px 25px;    
   padding-left: 2%;
   padding-right: 2%;
 
@@ -100,11 +109,12 @@ input {
 .submitBtn {
   color: var(--lightBlue);
   background-color: var(--darkBlue);
-  border: none;
-  border-radius: 30%;
+  border-radius: 25px 25px 25px 25px;    
   padding: 1%;
   padding-left: 10%;
   padding-right: 10%;
+  position: relative;
+  left: 145px;
 }
 
 .pStats {
@@ -113,5 +123,151 @@ input {
   box-shadow: 10px 10px 25px grey;
   justify-content: space-between;
   text-align: center;
+
+}
+
+
+
+/* index.html */
+
+.homeBar {
+  background-color: var(--darkBlue);  
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.homeBtns {
+  padding-top: 30px;
+}
+.signinBtn,
+.signupBtn {
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+}
+
+.signinBtn {
+  border-radius: 10px 0px 0px 10px;  
+}
+
+.signupBtn {
+  border-radius: 0px 10px 10px 0px;  
+}
+
+.hide {
+  display: none;
+}
+
+.main {
+  display: flex;
+  text-align: center;
+  padding: 2%;
+}
+
+.mainTitle {
+  position: relative;
+  top: 25px;
+  left: 70px;
+}
+
+.mainTxt {
+  background-color: var(--lightBlue);
+  position: relative;
+  top: 50px;
+  left: 70px;
+  padding: 5%;
+  border-radius: 50px 50px 50px 50px;  
+
+
+}
+
+.nutImg,
+.ballImg {
+  width: 600px;
+  border-radius: 25px 25px 25px 25px;  
+
+}
+
+
+.joinBtn {
+  background-color: var(--darkBlue);
+  position: relative;
+  top: 45px;
+  border-radius: 25px 25px 25px 25px;    
+  padding: 1%;
+  padding-left: 7%;
+  padding-right: 7%;
+
+}
+
+
+footer {
+  background-color: var(--footer);
+  color: white;
+}
+
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+}
+
+.footerTitle {
+  position: relative;
+  top: 50px;
+  right: 90px;
+}
+
+
+.userSignin,
+.userSignup {
+  padding: 5%;
+  box-shadow: 10px 10px 25px grey;
+}
+
+.login {
+  padding: 5%;
+  box-shadow: 10px 10px 25px grey;
+}
+
+.eyesImg {
+  width: 5%;
+  float: right;
+
+}
+
+.pointerImgR,
+.pointerImgL {
+  width: 5%;
+  position: relative;
+  top: 30px;
+}
+
+.pointerImgR {
+  transform: rotate(-90deg);
+}
+
+.pointerImgL {
+  transform: rotate(90deg);
+}
+
+.logBtn {
+  border-radius: 25px 25px 25px 25px;    
+  background-color: var(--darkBlue);
+  padding: 1%;
+  padding-left: 10%;
+  padding-right: 10%;
 
 }
