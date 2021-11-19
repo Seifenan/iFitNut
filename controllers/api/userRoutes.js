@@ -1,26 +1,22 @@
 const router = require('express').Router();
 const { User } =require('../../model')
 
-router.post('/', async (req, res)=>{
+router.post('/', (req, res)=>{
 	//this route is used to add a new user in the db
-	try {
-		const user = await User.create({
+	User.create({
 			username: req.body.username,
 			password: req.body.password
-		})
+		}).then(userData => {
+			req.session.save(()=>{
+				req.session.userId =  userData.id;
+				req.session.username = userData.username;
+				req.session.loggedIn = true;
+				res.json(userData)
+			})
 
-		req.session.save(()=>{
-			req.session.userId =  user.id;
-			req.session.username = user.username;
-			req.session.loggedIn = true;
-			
-			res.json(user);
-		})
-		
-
-	} catch(err){
-		res.status(500).json(err)
-	}
+		}).catch(err => {
+			res.status(500).json(err)
+		})	
 });
 
 router.post('/login', async (req, res)=>{	
