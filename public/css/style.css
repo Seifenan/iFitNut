@@ -1,3 +1,8 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
 :root {
   --lightBlue: #D9F1FE;
   --darkBlue: #45C1F3;
@@ -19,7 +24,8 @@ button {
   
 }
 
-button:hover {
+button:hover,
+.submitBtn:hover {
   filter: brightness(75%);
 }
 
@@ -41,7 +47,7 @@ button:hover {
 }
 
 .logoutBtn {
-  color: var(--darkBlue);
+  color: black;
   background-color: var(--lightBlue);
   border-radius: 25px 25px 25px 25px; 
   /* padding: .5%;
@@ -59,14 +65,19 @@ button:hover {
 }
 
 
-.sendBtn,
-.statsBtn {
-  color: var(--darkBlue);
+.bBtn,
+.eBtn {
+  color: black;
   background-color: var(--lightBlue);
   border-radius: 25px 25px 25px 25px;    
-  padding-left: 2%;
-  padding-right: 2%;
+}
 
+.eBtn {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  padding: 20px;
+  width: 100%;
+  font-size: large;
 }
 
 
@@ -82,8 +93,9 @@ input {
 
 
 .container {
-  display: flex;
   padding: 5%;
+  padding-left: 160px;
+
 }
 
 .containerTwo {
@@ -112,15 +124,13 @@ input {
 
 
 .submitBtn {
-  color: var(--lightBlue);
+  color: black;
   background-color: var(--darkBlue);
   border-radius: 25px 25px 25px 25px;    
   padding: 1%;
   padding-left: 10%;
   padding-right: 10%;
-  position: relative;
-  left: 145px;
-}
+ }
 
 .pStats {
   display: flex;

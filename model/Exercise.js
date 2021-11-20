@@ -1,19 +1,13 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config");
 
-class Exercise extends Model { }
+class Exercise extends Model {}
 
 Exercise.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     date: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: false,
     },
     weight: {
       type: DataTypes.INTEGER,
@@ -35,15 +29,9 @@ Exercise.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    user_id: {
-      type: DataTypes.INTEGER
-    }
   },
   {
     sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "Exercise",
   }
 );
 
