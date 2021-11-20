@@ -1,17 +1,14 @@
- 
-<a href="/exercise/new"><button>➕ Add New Exercise</button></a>
-
-
+   
+    
     <div id="previousStats">
-    <h3>Last 5 Days</h3>
+    <h3 class="center">Last 5 Days</h3>
       {{#each exercise}}
       {{#if @first}}
-      <input type="hidden" name='username' value="{{User.username}}" /
+      <input type="hidden" name='username' value="{{User.username}}"/>
       {{/if}}
 
-      <li>
+      <li class="pStats">
         <p>Date: {{date}}</p>
-        <p>Height: {{height}}</p>
         <p>Weight: {{weight}}</p>
         <p>Push-Ups: {{pushups}}</p>
         <p>Sit-Ups: {{situps}}</p>
@@ -21,10 +18,8 @@
       {{/each}}
 
     </div>
-  </div>
-    <div id="graphicalView">
-    <h3>Graphical View</h3>
-    <button id="emailButton" type="button" >Email Results</button>
+     </div>
+      <button class="eBtn" id="emailButton" type="button" >✉ Email Results</button>
     </div>
   </div>
   <script src="/js/email.js"></script>
