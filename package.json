@@ -20,12 +20,12 @@
   "homepage": "https://github.com/Seifenan/Project-2-iFitNut#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^7.1.2",
+    "connect-session-sequelize": "^6.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express-handlebars": "^6.0.0",
-    "express-session": "^1.17.2",
-    "mysql2": "^2.3.3-rc.0",
-    "sequelize": "^6.9.0"
+    "express-handlebars": "^6.0.1",
+    "express-session": "^1.17.0",
+    "mysql2": "^2.0.1",
+    "sequelize": "^5.21.2"
   }
 }

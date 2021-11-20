@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const sequelize = require("../config/config");
 
-class Exercise extends Model {}
+class Exercise extends Model { }
 
 Exercise.init(
   {
@@ -12,11 +12,8 @@ Exercise.init(
       autoIncrement: true,
     },
     date: {
-		//insert date column info here. look at sequelize docs to figure out how to save the current date
-	},
-    height: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+      type: DataTypes.DATE,
+      allowNull: false
     },
     weight: {
       type: DataTypes.INTEGER,
@@ -38,12 +35,15 @@ Exercise.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    user_id: {
+      type: DataTypes.INTEGER
+    }
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "exercise",
+    modelName: "Exercise",
   }
 );
 
