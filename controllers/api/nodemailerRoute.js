@@ -9,10 +9,10 @@ function sendData(to, body){
 
     // Step 1
     let transporter = nodemailer.createTransport({
-        service: 'hotmail',
+        service: 'gmail',
         auth: {
-            user: process.env.EMAIL, // TODO: your gmail account  cebTest9000x@hotmail.com cebTestEmail9000@gmail.com
-            pass: process.env.PASSWORD// TODO: your gmail password
+            user: 'cebTestEmail9000@gmail.com', // TODO: your gmail account  cebTest9000x@hotmail.com cebTestEmail9000@gmail.com
+            pass: 'miseifnas9000$$'// TODO: your gmail password
         }
     });
 
