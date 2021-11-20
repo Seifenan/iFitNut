@@ -4,6 +4,6 @@ const exerciseRoutes = require('./exerciseRoutes')
 
 
 router.use('/user', userRoutes);
-router.use('api/exercise', exerciseRoutes)
+router.use('/exercise', exerciseRoutes)
 
 module.exports = router;

@@ -15,10 +15,6 @@ Exercise.init(
       type: DataTypes.DATE,
       allowNull: false
     },
-    height: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     weight: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -39,6 +35,9 @@ Exercise.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    user_id: {
+      type: DataTypes.INTEGER
+    }
   },
   {
     sequelize,

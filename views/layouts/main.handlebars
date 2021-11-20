@@ -1,32 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
-    <title>iFitNut</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="stylesheet" type="text/css" href="../public/css/style.css" />
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/exercise">Exercises</a></li>
-         <li><a href="/food">Foods</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/login">Login</a></li>
-      </ul>
-    </nav>
-    <main>
-      {{{body}}}
-    </main>
-    
-    <footer> Footer goes here</footer>
-  </body>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>iFitNut</title>
+</head>
+
+<body>
+  <header>
+    {{#if loggedIn}}
+    <div class="userBar">
+      <img class="nutImg"
+        src="https://static.wixstatic.com/media/8850ab_3f6a378121ba42d8bf9d3a90a5c8d936~mv2.gif/v1/fit/w_320,h_214,al_c,q_80/file.gif"
+        alt="workout-nut-giff" style="width: 10%;">
+      <div class="userInfo">
+        <h4>Your Name</h4>
+        <p>Age</p>
+      </div>
+      <div class="navBtn">
+        <button href="#" id="logout">log Out</button>
+      </div>
+    </div>
+    <div class="nav">
+      <a title="Coming Soon!" href="">Exercises</a>
+      <a title="Coming Soon!" href="">Food</a>
+      <a title="Coming Soon!" href="">Community</a>
+      <a title="Coming Soon!" href="">About Us</a>
+      <button class="sendBtn">Send me my Stats</button>
+      <button class="statsBtn">My Stats</button>
+    </div>
+
+    {{else}}
+
+    <div class="homeBar">
+      <div>
+        <a href="/">
+          <h1 class="pgName">iFitNut</h1>
+        </a>
+      </div>
+      <div class="homeBtns">
+        <a href="/login"><button class="signinBtn">Sign In</button></a>
+        <a href="/signup"><button class="signupBtn">Sign Up</button></a>
+      </div>
+    </div>
+    <div class="nav">
+      <a title="Coming Soon!" href="">Exercises</a>
+      <a title="Coming Soon!" href="">Food</a>
+      <a title="Coming Soon!" href="">Community</a>
+      <a title="Coming Soon!" href="">About Us</a>
+    </div>
+
+    {{/if}}
+  </header>
+
+  <main>
+    {{{ body }}}
+  </main>
+
+  <footer>
+    <div class="row">
+
+      <div class="column">
+        <a href="/">
+          <h1 class="footerTitle">iFitNut</h1>
+        </a>
+        <img class="ballImg" src="https://i.gifer.com/AqxJ.gif" alt="workout-ball-giff">
+      </div>
+
+      <div class="column">
+        <div>
+          <h2>Exercises</h2>
+          <p>Endurance</p>
+          <p>Strength</p>
+          <p>Balance</p>
+          <p>Flexibility</p>
+        </div>
+        <br>
+        <div>
+          <h2>Food</h2>
+          <p>Vegetables</p>
+          <p>Fruits</p>
+          <p>Grains, Legumes, Nuts and Seeds</p>
+          <p>Meat and Poultry</p>
+          <p>Fish and Seafood</p>
+          <p>Dairy Foods</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div>
+          <h2>Community</h2>
+          <p>Our Community</p>
+          <p>What’s New</p>
+        </div>
+        <br>
+        <div>
+          <h2>About Us</h2>
+          <p>About Us</p>
+          <p>Tutorials</p>
+          <p>Our Team</p>
+        </div>
+        <br>
+        <div>
+          <h2>Contact Us</h2>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="/js/stats.js"></script>
+    {{#if loggedIn}}
   <script src="/js/logout.js"></script>
+  <script src="/js/stats.js"></script>
+  {{/if}}
+</body>
+
 </html>

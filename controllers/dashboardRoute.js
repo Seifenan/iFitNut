@@ -5,14 +5,10 @@ const withAuth = require("../util/auth");
 
 router.get("/", withAuth, (req, res) => {
   try {
-    res.render("test", {
-      layout: "dashboard",
-    });
+    res.render("test", { loggedIn: req.session.loggedIn });
   } catch (err) {
     res.redirect("login");
   }
 });
-
-
 
 module.exports = router;
