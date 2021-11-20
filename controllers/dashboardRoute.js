@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const withAuth = require("../util/auth");
-const { Exercise } = require("../model");
+const { Exercise, User } = require("../model");
 
 // all these routes have to be behind authenication
 
@@ -9,8 +9,9 @@ router.get('/', withAuth, async (req, res) => {
     const exerciseDate = await Exercise.findAll({
       limit: 5,
       where: {
-        userId: req.session.userId,
+        userId: req.session.userId
       },
+      include:[User], 
       order:[ ['createdAt', 'DESC']]
     });
 

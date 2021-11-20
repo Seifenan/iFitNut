@@ -19,8 +19,7 @@ button {
   
 }
 
-button:hover,
-.submitBtn:hover {
+button:hover {
   filter: brightness(75%);
 }
 
@@ -42,9 +41,12 @@ button:hover,
 }
 
 .logoutBtn {
-  color: black;
+  color: var(--darkBlue);
   background-color: var(--lightBlue);
   border-radius: 25px 25px 25px 25px; 
+  /* padding: .5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%; */
 }
 
 
@@ -57,20 +59,16 @@ button:hover,
 }
 
 
-.bBtn {
-  border-radius: 25px 25px 25px 25px;
-}
-
-
-.sendBtn {
-  color: black;
-  background-color: var(--lightBlue);
-}
-
+.sendBtn,
 .statsBtn {
-  color: black;
+  color: var(--darkBlue);
   background-color: var(--lightBlue);
+  border-radius: 25px 25px 25px 25px;    
+  padding-left: 2%;
+  padding-right: 2%;
+
 }
+
 
 input {
   width: 100%;
@@ -84,20 +82,26 @@ input {
 
 
 .container {
+  display: flex;
   padding: 5%;
 }
 
-/* .containerTwo {
+.containerTwo {
   display: flex;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 1%;
   padding-bottom: 1%;
 
-} */
+}
+
+.prevS {
+  padding-bottom: 5%;
+}
 
 .cStats,
 .lStats {
+  flex: 1;
   padding: 5%;
   box-shadow: 10px 10px 25px grey;
 }
@@ -111,8 +115,11 @@ input {
   color: var(--lightBlue);
   background-color: var(--darkBlue);
   border-radius: 25px 25px 25px 25px;    
+  padding: 1%;
   padding-left: 10%;
   padding-right: 10%;
+  position: relative;
+  left: 145px;
 }
 
 .pStats {
