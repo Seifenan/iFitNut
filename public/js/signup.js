@@ -14,7 +14,7 @@ const signupFormHandler = async function (e){
 	});
 
 	if (response.ok){
-		document.location.replace('/exercise')
+		document.location.replace('/exercise/new')
 	} else{
 		alert('failed to sign up')
 	}

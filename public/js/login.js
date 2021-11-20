@@ -16,7 +16,7 @@ const loginFormHandler = async function (e){
 	});
 
 	if (response.ok){
-	 document.location.replace('/exercise')
+	 document.location.replace('/exercise/new')
 	} else{
 		alert('failed to login')
 	}

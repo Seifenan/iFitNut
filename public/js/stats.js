@@ -1,11 +1,10 @@
-const id = 4;//just using a fixed value for user ID
-const d = new Date();
-var submitButton = $("#submit");
 
-submitButton.on("click", (e) => {
+const d = new Date();
+var submitButton = $("#exerciseForm");
+
+submitButton.on("submit", (e) => {
     e.preventDefault()
     const data = {
-        user_id: id,
         date: d,
         weight: $("#weightSubmit").val().trim(),
         pushups: $("#pushupsSubmit").val().trim(),
@@ -22,5 +21,5 @@ submitButton.on("click", (e) => {
         .then(response => response.json())
         .then(data => {
         console.log(data)
-        })
+        }).then(()=> document.location.replace('/exercise'))
 })

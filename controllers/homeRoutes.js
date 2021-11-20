@@ -18,7 +18,7 @@ router.get('/login', (req, res)=>{
         return
     }
 
-    res.render('login', {loggedIn: req.session.loggedIn})
+    res.render('login')
 });
 
 router.get('/signup', (req, res)=>{

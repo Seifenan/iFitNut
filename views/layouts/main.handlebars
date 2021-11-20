@@ -11,30 +11,6 @@
 
 <body>
   <header>
-    {{#if loggedIn}}
-    <div class="userBar">
-      <img class="nutImg"
-        src="https://static.wixstatic.com/media/8850ab_3f6a378121ba42d8bf9d3a90a5c8d936~mv2.gif/v1/fit/w_320,h_214,al_c,q_80/file.gif"
-        alt="workout-nut-giff" style="width: 10%;">
-      <div class="userInfo">
-        <h4>Your Name</h4>
-        <p>Age</p>
-      </div>
-      <div class="navBtn">
-        <button href="#" id="logout">log Out</button>
-      </div>
-    </div>
-    <div class="nav">
-      <a title="Coming Soon!" href="">Exercises</a>
-      <a title="Coming Soon!" href="">Food</a>
-      <a title="Coming Soon!" href="">Community</a>
-      <a title="Coming Soon!" href="">About Us</a>
-      <button class="sendBtn">Send me my Stats</button>
-      <button class="statsBtn">My Stats</button>
-    </div>
-
-    {{else}}
-
     <div class="homeBar">
       <div>
         <a href="/">
@@ -47,13 +23,13 @@
       </div>
     </div>
     <div class="nav">
-      <a title="Coming Soon!" href="">Exercises</a>
-      <a title="Coming Soon!" href="">Food</a>
-      <a title="Coming Soon!" href="">Community</a>
-      <a title="Coming Soon!" href="">About Us</a>
+      <a title="Coming Soon!" href="/exercise">Exercises</a>
+      <a title="Coming Soon!" href="/food">Food</a>
+      <a title="Coming Soon!" href="/community">Community</a>
+      <a title="Coming Soon!" href="/about">About Us</a>
     </div>
 
-    {{/if}}
+  
   </header>
 
   <main>
@@ -112,10 +88,9 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  <script src="/js/stats.js"></script>
-  {{/if}}
+
+
+
 </body>
 
 </html>

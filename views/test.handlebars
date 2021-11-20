@@ -1,5 +1,9 @@
-  <div id="statSubmission">
-    <form>
+ 
+{{!-- <a href="/exercise/new"><button>➕ Add New Exercise</button></a> --}}
+
+  
+  {{!-- <div id="statSubmission">
+    <form id="exerciseForm">
       <label for="weight">Weight:</label><br>
       <input type="number" id="weightSubmit" name="weightSubmit"><br>
       <label for="pushups">Push Ups:</label><br>
@@ -12,10 +16,25 @@
       <input type="number" id="runtimeSubmit" name="runtimeSubmit"><br>
       <input id="submit" type="submit" value="Submit">
     </form>
-  </div>
+  </div> --}}
     <div id="previousStats">
     <h3>Last 5 Days</h3>
+      {{#each exercise}}
+
+      <li class="pStats">
+        <p>Date: {{date}}</p>
+        <p>Weight: {{weight}}</p>
+        <p>Push-Ups: {{pushups}}</p>
+        <p>Sit-Ups: {{situps}}</p>
+        <p>Pull-Ups: {{pullups}}</p>
+        <p>Run Time: {{runtime}}</p>
+      </li>
+      {{/each}}
+
+    </div>
   </div>
     <div id="graphicalView">
     <h3>Graphical View</h3>
+    </div>
   </div>
+
