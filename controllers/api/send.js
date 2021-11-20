@@ -26,7 +26,7 @@ router.post('/', async (req, res)=>{
          const html =  `
           <li>
           <p>Date: ${date}</p>
-          <p>Weight: ${weight}</p>
+          <p>Weight: ${weight} lbs</p>
           <p>Push-Ups: ${push}</p>
           <p>Sit-Ups: ${sit}</p>
           <p>Pull-Ups: ${pull}</p>
