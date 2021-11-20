@@ -9,8 +9,7 @@ router.post('/', (req, res) => {
         pushups: req.body.pushups,
         situps: req.body.situps,
         pullups: req.body.pullups,
-        runtime: req.body.runtime,
-        user_id: req.body.user_id
+        runtime: req.body.runtime
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
@@ -19,17 +18,7 @@ router.post('/', (req, res) => {
         });
 });
 
-// Set up a client side route when stats page loads to this endpoint
-router.get('/:user_id', (req,res) => {
-const user_id = req.params.user_id
-Exercise.findAll({
-    where: {
-        user_id
-    }
-}).then(data => {
-    res.json(data)
-})
-})
+
 
 
 module.exports = router;

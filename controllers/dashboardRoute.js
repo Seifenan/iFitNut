@@ -3,9 +3,20 @@ const withAuth = require("../util/auth");
 
 // all these routes have to be behind authenication
 
-router.get("/", withAuth, (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
-    res.render("test", { loggedIn: req.session.loggedIn });
+    // const exerciseData = await Exercise.findAll({
+    //   where:{
+    //     userId: req.session.userId
+    //   }
+    // })
+
+    // const daily= exerciseData.map((data)=> data.get({plain: true}))
+
+    res.render("test", { 
+      loggedIn: req.session.loggedIn, 
+      //daily 
+    });
   } catch (err) {
     res.redirect("login");
   }
