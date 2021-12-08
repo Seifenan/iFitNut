@@ -11,8 +11,8 @@ function sendData(to, body){
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'cebTestEmail9000@gmail.com', // TODO: your gmail account  cebTest9000x@hotmail.com cebTestEmail9000@gmail.com
-            pass: 'miseifnas9000$$'// TODO: your gmail password
+            user: process.env.EMAIL, // TODO: your gmail account  cebTest9000x@hotmail.com cebTestEmail9000@gmail.com
+            pass: process.env.PASSWORD// TODO: your gmail password
         }
     });
 
