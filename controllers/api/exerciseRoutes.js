@@ -5,7 +5,7 @@ router.post('/', (req, res) => {
     console.log(req.body)
     const body = req.body
     Exercise.create({
-        ...body, 
+        ...body,
         userId: req.session.userId
     })
         .then(dbPostData => res.json(dbPostData))
@@ -14,8 +14,5 @@ router.post('/', (req, res) => {
             res.status(500).json(err);
         });
 });
-
-
-
 
 module.exports = router;

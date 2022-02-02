@@ -1,3 +1,2 @@
 DROP DATABASE IF EXISTS ifitnut_db;
 CREATE DATABASE ifitnut_db;
-

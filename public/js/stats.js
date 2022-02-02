@@ -1,4 +1,3 @@
-
 const d = new Date();
 var submitButton = $("#exerciseForm");
 
@@ -17,9 +16,9 @@ submitButton.on("submit", (e) => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
-        })
+    })
         .then(response => response.json())
         .then(data => {
-        console.log(data)
-        }).then(()=> document.location.replace('/exercise'))
+            console.log(data)
+        }).then(() => document.location.replace('/exercise'))
 })

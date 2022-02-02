@@ -3,7 +3,6 @@ const withAuth = require("../util/auth");
 const { Exercise, User } = require("../model");
 
 // all these routes have to be behind authenication
-
 router.get('/', withAuth, async (req, res) => {
   try {
     const exerciseDate = await Exercise.findAll({
@@ -11,8 +10,8 @@ router.get('/', withAuth, async (req, res) => {
       where: {
         userId: req.session.userId
       },
-      include:[User], 
-      order:[ ['createdAt', 'DESC']]
+      include: [User],
+      order: [['createdAt', 'DESC']]
     });
 
     const exercise = exerciseDate.map((data) => data.get({ plain: true }));
@@ -21,7 +20,7 @@ router.get('/', withAuth, async (req, res) => {
       layout: 'dashboard',
       exercise,
     });
-    
+
   } catch (err) {
     res.redirect('login');
   }

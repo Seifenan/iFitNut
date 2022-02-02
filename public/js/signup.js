@@ -1,21 +1,21 @@
-const signupFormHandler = async function (e){
+const signupFormHandler = async function (e) {
 	e.preventDefault()
 
 	const userInput = document.querySelector('#username-input');
-	const passwordInput =  document.querySelector('#password-input');
+	const passwordInput = document.querySelector('#password-input');
 
-	const response =  await fetch('/api/user', {
-		method: 'POST', 
+	const response = await fetch('/api/user', {
+		method: 'POST',
 		body: JSON.stringify({
-			username: userInput.value, 
+			username: userInput.value,
 			password: passwordInput.value
 		}),
-		headers: { 'Content-Type': 'application/json'}
+		headers: { 'Content-Type': 'application/json' }
 	});
 
-	if (response.ok){
+	if (response.ok) {
 		document.location.replace('/exercise/new')
-	} else{
+	} else {
 		alert('failed to sign up')
 	}
 };
