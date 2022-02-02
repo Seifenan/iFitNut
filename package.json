@@ -1,5 +1,5 @@
 {
-  "name": "project-2-ifitnut",
+  "name": "ifitnut",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Seifenan/Project-2-iFitNut.git"
+    "url": "git+https://github.com/Seifenan/iFitNut.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Seifenan/Project-2-iFitNut/issues"
+    "url": "https://github.com/Seifenan/iFitNut/issues"
   },
-  "homepage": "https://github.com/Seifenan/Project-2-iFitNut#readme",
+  "homepage": "https://github.com/Seifenan/iFitNut#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^6.1.1",
